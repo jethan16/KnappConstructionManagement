@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: "knapp_construction_management",
@@ -6,7 +10,7 @@ module.exports = {
     {
       resolve: "gatsby-source-datocms",
       options: {
-        apiToken: "699551ab06caaa07c712dfc53365f2",
+        apiToken: process.env.GATSBY_DATO_CMS_KEY,
       },
     },
     "gatsby-plugin-styled-components",

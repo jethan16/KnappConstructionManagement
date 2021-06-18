@@ -1,0 +1,444 @@
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~   */
+/*  Global Styles */
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~   */
+
+:root {
+--white-text-color: #ffffff;
+--light-text-color: #B0AAA1;
+--accent-text-color: #FF5200;
+--dark-text-color: #342928;
+
+}
+
+svg * {
+    color: var(--light-text-color);
+}
+
+body {
+    margin: 0;
+}
+
+* {
+    font-family: 'poppins';
+    color: var(--dark-text-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2,h3,h4,h5,h6 {
+    font-weight: 400;
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
+.pos-absolute {
+    position: absolute;
+}
+
+.bottom {
+    bottom: 0;
+    left: 0;
+}
+
+/* Column Widths */
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    max-width: 100%;
+}
+
+[class*="col-"] * {
+    width: 100%;
+}
+
+/*  */
+
+.row {
+    position: relative;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-row {
+    flex-direction: row !important;
+}
+
+.flex-center {
+    justify-content: center !important;
+}
+
+.space-evenly {
+    justify-content: space-evenly !important;
+}
+
+.space-around {
+    justify-content: space-around !important;
+}
+
+.space-between {
+    justify-content: space-between !important;
+}
+
+.align-center {
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    [class*="col-"] {
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.p-LR-25 {
+    padding: 0 25px;
+}
+
+.p-R-100 {
+    padding-right: 100px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Hero Styles */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.hero {
+    background-repeat: no-repeat;
+}
+
+.hero .overlay {
+    background: #EDE6E0;
+    opacity: .65;
+}
+
+.image-container {
+    align-self: end;
+    position: relative;
+}
+
+.hero-image {
+    display: block;
+    margin: 0 auto;
+    min-width: 320px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+._inner div {
+    margin-top: 50px;
+}
+
+.title * {
+    margin: 25px 0;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-image: url(https://www.datocms-assets.com/48980/1623440642-herobackgroundimagemd.png);
+    }
+
+    .hero-image {
+        display: block;
+        margin: 0 auto;
+        min-width: 250px;
+        max-width: 425px;
+    }
+
+    ._inner {
+        padding: 0 25px;
+    }
+}
+
+@media (min-width: 770px) {
+    .hero {
+        background-image: url(https://www.datocms-assets.com/48980/1623798364-herobackgroundimagelg.png);
+        background-size: cover;
+    }
+
+    ._inner {
+        padding: 0 25px;
+        margin-top: 25px;
+    }
+
+    .title h1 {
+        font-size: 31px;
+    }
+
+    .title h2 {
+        width: 80.5%;
+        font-size: 23px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    ._inner {
+        padding: 0 50px;
+    }
+
+    .hero-image {
+        position: absolute;
+        height: auto;
+        bottom: 0; left: 0;
+        width: 400px;
+    }
+
+    .title {
+        padding-bottom: 75px;
+    }
+
+    .title h1 {
+        font-size: 30px;
+        margin-top: 0;
+    }
+
+    .title h2 {
+        width: 85%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .hero {
+        padding: 0 90px;
+    }
+
+    .hero-image {
+        width: 415px;
+    }
+
+    ._inner {
+        padding: 0 50px;
+    }
+
+    .title {
+        padding-bottom: 100px;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+
+    .hero {
+        padding: 0 90px;
+    }
+
+    .hero-image {
+        width: 445px;
+    }
+
+    ._inner {
+        padding: 0 150px;
+        margin-top: 75px;
+    }
+
+    .title {
+        padding-bottom: 125px;
+    }
+
+    .title h2 {
+        width: 82%;
+    }
+
+
+}
+
+@media screen and (min-width: 1720px) {
+    .hero {
+        padding: 0 250px;
+        background-size: cover;
+    }
+
+    .hero-image {
+        width: 465px;
+    }
+
+    ._inner {
+        padding: 0px 75px;
+    }
+
+    .title {
+        transform: scale(1.075);
+    }
+
+    .title h1 {
+        font-size: 34px;
+    }
+
+    .title h2 {
+        font-size: 26px;
+        width: 85%;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Services Styles */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+section {
+    background-color: var(--dark-text-color);
+    padding: 25px 10px;
+}
+
+.service * {
+    text-align: center;
+}
+
+.service {
+    padding: 15px 0px;
+}
+
+.service h4, .service h3 {
+    color: var(--accent-text-color);
+    margin: 0;
+}
+
+.service p {
+    color: var(--light-text-color);
+    margin: 15px 0;
+}
+
+.service span {
+    color: var(--white-text-color)
+}
+
+@media screen and (min-width: 768px) {
+    section {
+        padding: 15px 10px;
+    }
+
+    .service p {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .service h3 {
+        font-size: 19px;
+    }
+
+    .service p {
+        display: block;
+        width: 88%;
+        padding: 0;
+        margin: 15px auto;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    section {
+        padding: 35px 80px;
+    }
+
+    .service h3 {
+        font-size: 16px;
+    }
+
+    .service h4 {
+        font-size: 14px
+    }
+
+    .service p {
+        font-size: 14px;
+        width: 95%;
+    }
+}
+
+@media only screen and (min-width: 1720px) {
+    section {
+        padding: 100px 250px;
+    }
+
+    .service h3 {
+        font-size: 20px;
+    }
+
+    .service h4 {
+        font-size: 18px
+    }
+
+    .service p {
+        font-size: 18px;
+        width: 100%;
+        padding: 0 25px;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Footer Styles */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+footer {
+    background: var(--dark-text-color);
+}
+
+footer h5 {
+    color: var(--light-text-color);
+    margin: 0;
+    margin: 10px 0;
+}
+
+.social-bar {
+    margin: 0 10px;
+}
+
+.social-bar * {
+    margin: 0 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    footer div {
+        margin-right: auto;
+        margin-left: 10px;
+    }
+}
