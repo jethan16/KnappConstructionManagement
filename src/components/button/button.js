@@ -18,7 +18,7 @@ const Button = styled.a`
 const ButtonComp = () => {
     return(
       <a>
-        <Button>
+        <Button mailto='ethan.nel.jones@gmail.com'>
           Contact Us
         </Button>
       </a>
