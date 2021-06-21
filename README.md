@@ -1,12 +1,13 @@
-<p align="center">
-  <a href="">
-    <img alt="KCM Logo" src="https://www.datocms-assets.com/48980/1622657583-kcmlogo-o.png" width="100" />
-  </a>
-</p>
-<h1 align="center">
-  Knapp Construction Management
-</h1>
-
+<div>
+  <p align="left">
+    <a href="">
+      <img alt="KCM Logo" src="https://www.datocms-assets.com/48980/1622657583-kcmlogo-o.png" width="200" />
+    </a>
+  </p>
+  <h1 align="right">
+    Knapp Construction Management
+  </h1>
+</div>
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
