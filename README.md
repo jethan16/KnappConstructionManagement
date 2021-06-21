@@ -1,6 +1,6 @@
 <p align="center">
   <a href="">
-    <img alt="KCM Logo" src="https://www.datocms-assets.com/48980/1622657583-kcmlogo-o.png" width="60" />
+    <img alt="KCM Logo" src="https://www.datocms-assets.com/48980/1622657583-kcmlogo-o.png" width="100" />
   </a>
 </p>
 <h1 align="center">
