@@ -286,7 +286,7 @@ h2,h3,h4,h5,h6 {
 
     ._inner {
         padding: 0 150px;
-        margin-top: 75px;
+        margin-top: 40px;
     }
 
     .title {
@@ -312,6 +312,7 @@ h2,h3,h4,h5,h6 {
 
     ._inner {
         padding: 0px 75px;
+        margin-top: 70px;
     }
 
     .title {
@@ -324,7 +325,7 @@ h2,h3,h4,h5,h6 {
 
     .title h2 {
         font-size: 26px;
-        width: 85%;
+        width: 78.5%;
     }
 }
 
@@ -471,7 +472,7 @@ section {
 @media screen and (min-width: 1200px) {
 
     section {
-        padding: 35px 80px;
+        padding: 45px 80px;
     }
 
     .service h3 {
@@ -488,9 +489,16 @@ section {
     }
 }
 
+@media screen and (min-width: 1440px) {
+    section {
+        padding: 35px 80px;
+    }
+}
+
 @media only screen and (min-width: 1720px) {
     section {
-        padding: 100px 250px;
+        padding: 45px 80px;
+
     }
 
     .service h3 {
