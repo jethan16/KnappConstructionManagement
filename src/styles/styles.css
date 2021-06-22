@@ -14,6 +14,10 @@ svg * {
     color: var(--light-text-color);
 }
 
+.service svg * {
+    color: var(--accent-text-color) !important;
+}
+
 html, body {
     margin: 0;
 }
@@ -326,18 +330,40 @@ h2,h3,h4,h5,h6 {
 
 /* iPad Pro Styles */
 
+/* Portrait */
+
 @media screen and (device-width: 1024px) and (device-height: 1366px) {
+
+    ._inner {
+        margin-top: 60px;
+    }
+
     section .flex {
         flex-direction: column;
     }
 
+    .service h3 {
+        font-size: 22px !important;
+    }
+
+    .service h4 {
+        display: block;
+        font-size: 18px;
+        width: auto;
+        margin: 0 10px !important;
+    }
+
+    .service p  {
+        font-size: 18px;
+    }
+
    .col-4 {
-       width: 75%;
+       width: 65%;
        margin: 0 auto;
    }
 
    .service {
-       margin: 35px auto;
+       margin: 5px auto;
    }
 
    .service p {
@@ -345,6 +371,34 @@ h2,h3,h4,h5,h6 {
    }
 }
 
+/* Landscape */
+
+@media screen and (device-width: 1366px) and (device-height: 1024px) {
+    ._inner {
+        margin-top: 130px;
+    }
+
+    .hero-image {
+        widtH: 425px
+    }
+
+    .title h1 {
+        font-size: 35px;
+    }
+
+    .title h2 {
+        width: 72%;
+    }
+
+    .service h3 {
+        font-size: 20px !important;
+    }
+
+    .service h4, .service p {
+        font-size: 16px !important;
+    }
+
+}
 /*  */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -367,6 +421,13 @@ section {
 .service h4, .service h3 {
     color: var(--accent-text-color);
     margin: 0;
+}
+
+.service h4 {
+    display: block;
+    font-size: 18px;
+    width: auto;
+    margin: 0 10px !important;
 }
 
 .service p {

@@ -7,7 +7,7 @@ import "@fontsource/poppins/700.css"
 import "../styles/styles.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faCopyright, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDoubleLeft, faAngleDoubleRight, faCopyright, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 
 // Components 
 import Button from "../components/button/button.js"
@@ -56,18 +56,22 @@ const IndexPage = ({data}) => {
           </div>
         </div>
       </div>
-      <section className=''>
+      <section>
         <div className='row flex flex-center'>
           {services.map(service => (
             <div className='col-4 service'>
               <h3>{service.title}</h3>
-              <h4>{service.subtitle}</h4>
+              <div className='flex flex-row align-center flex-center'>
+                <FontAwesomeIcon icon={faAngleDoubleRight}/>
+                <h4>{service.subtitle}</h4>
+                <FontAwesomeIcon icon={faAngleDoubleLeft}/>
+              </div>
               <p><span>{service.accentText}</span>{service.body}</p>
             </div>
           ))}
         </div>
         <footer className='flex'>
-        <div className='flex flex-row'>
+        <div className='flex flex-row flex-center'>
         <div className='flex flex-row align-center'>
           <FontAwesomeIcon icon={faCopyright}/>
           <h5 className='mL-15'>2021 Knapp Construction Management</h5>
