@@ -7,7 +7,7 @@ import "@fontsource/poppins/700.css"
 import "../styles/styles.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faCopyright, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 
 // Components 
 import Button from "../components/button/button.js"
@@ -67,8 +67,11 @@ const IndexPage = ({data}) => {
           ))}
         </div>
         <footer className='flex'>
-        <div className='flex'>
-          <h5>2021 Knapp Construction Management</h5>
+        <div className='flex flex-row'>
+        <div className='flex flex-row align-center'>
+          <FontAwesomeIcon icon={faCopyright}/>
+          <h5 className='mL-15'>2021 Knapp Construction Management</h5>
+        </div>
           <div className='flex flex-row space-evenly align-center social-bar '>
             <FontAwesomeIcon icon={faEnvelope} />
             <FontAwesomeIcon icon={faPhone} />
