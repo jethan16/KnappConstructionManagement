@@ -77,9 +77,15 @@ const IndexPage = ({data}) => {
           <h5 className='mL-15'>2021 Knapp Construction Management</h5>
         </div>
           <div className='flex flex-row space-evenly align-center social-bar '>
-            <FontAwesomeIcon icon={faEnvelope} />
-            <FontAwesomeIcon icon={faPhone} />
-            <FontAwesomeIcon icon={faLinkedin} />
+            <a href='mailto:Gknapp@knappcm.com'>
+              <FontAwesomeIcon icon={faEnvelope} />
+            </a>
+            <a href='tel:+239-675-8333'>
+              <FontAwesomeIcon icon={faPhone} />
+            </a>
+            <a href='https://www.linkedin.com/in/gordon-knapp-85a0095b/' target='_blank'>
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
           </div>
         </div>
         </footer>
