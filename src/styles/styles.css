@@ -251,7 +251,10 @@ h2,h3,h4,h5,h6 {
 
     .title h2 {
         width: 85%;
+        max-width: 518px;
+
     }
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -312,7 +315,7 @@ h2,h3,h4,h5,h6 {
 
     ._inner {
         padding: 0px 75px;
-        margin-top: 70px;
+        margin-top: 125px;
     }
 
     .title {
@@ -325,7 +328,7 @@ h2,h3,h4,h5,h6 {
 
     .title h2 {
         font-size: 26px;
-        width: 78.5%;
+        width: 77.5%;
     }
 }
 
