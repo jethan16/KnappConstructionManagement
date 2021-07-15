@@ -61,11 +61,11 @@ const IndexPage = ({data}) => {
           {services.map(service => (
             <div className='col-4 service'>
               <h3>{service.title}</h3>
-              <div className='flex flex-row align-center flex-center'>
+              {/* <div className='flex flex-row align-center flex-center'>
                 <FontAwesomeIcon icon={faAngleDoubleRight}/>
                 <h4>{service.subtitle}</h4>
                 <FontAwesomeIcon icon={faAngleDoubleLeft}/>
-              </div>
+              </div> */}
               <p><span>{service.accentText}</span>{service.body}</p>
             </div>
           ))}
