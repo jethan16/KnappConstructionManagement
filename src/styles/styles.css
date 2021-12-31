@@ -4,14 +4,25 @@
 
 :root {
 --white-text-color: #ffffff;
---light-text-color: #B0AAA1;
---accent-text-color: #FF5200;
---dark-text-color: #342928;
+--accent-orange: #FE3200;
+--dark-grey: #33332e;
+--medium-grey: #666666;
+}
 
+.disp-none {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
 }
 
 svg * {
     color: var(--light-text-color);
+}
+
+a {
+    text-decoration: none;
 }
 
 .service svg * {

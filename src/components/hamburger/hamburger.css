@@ -1,0 +1,90 @@
+/* :root {
+   --accent-orange: #FE3200;
+   --dark-grey: #33332e;
+   --medium-grey: #666666;
+   --white: #FFFFFF;
+} */
+
+/* Hamburger Menu */
+
+.menu-wrapper {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    z-index: 1000;
+}
+
+.bar-container {
+    display: flex;
+    align-items: center;
+}
+
+.bar-container .bar {
+    width: 28px;
+    height: 5px;
+    margin: 2px 0;
+    border-radius: 15px;
+    background-color: var(--accent-orange);
+    transition: 300ms ease-in-out all;
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: var(--accent-orange);
+    margin-right: 3px;
+    transition: 300ms ease-in-out all;
+}
+
+/* SideBar  */
+
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 0px;
+    background: var(--dark-grey);
+    position: absolute;
+    right: 0px;
+    transition: 250ms;
+}
+
+li {
+    color: var(--white-text-color);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.active-link {
+    color: var(--accent-orange)
+}
+
+/* Animations */
+
+.vanish {
+    opacity: 0;
+    transform: translate(-100px, 0px);
+    transition: .5s ease-in-out all;
+}
+
+.bar-one { 
+    transform-origin: top left;
+    transform: rotate(45deg)
+}
+
+.bar-two {
+    transform-origin: bottom left;
+    transform: rotate(-45deg)
+}
+
+.reveal {
+    height: 100vh;
+    width: 320px;
+    position: absolute;
+    right: 0px;
+    transition: .5s;
+}
+
