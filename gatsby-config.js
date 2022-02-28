@@ -7,6 +7,9 @@ module.exports = {
     title: "knapp_construction_management",
   },
   plugins: [
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, 
     {
       resolve: "gatsby-source-datocms",
       options: {
@@ -15,5 +18,12 @@ module.exports = {
     },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-gatsby-cloud",
+    "gatsby-plugin-fontawesome-css",
+    {
+      resolve: "gatsby-plugin-scroll-reveal",
+      options: {
+        once: true
+      }
+    }
   ],
 };

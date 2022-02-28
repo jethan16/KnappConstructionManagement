@@ -82,9 +82,14 @@ li {
 
 .reveal {
     height: 100vh;
-    width: 320px;
-    position: absolute;
+    width: 100vw;
     right: 0px;
     transition: .5s;
+}
+
+@media only screen and (min-width: 768px) {
+    .reveal {
+        width: 320px;
+    }
 }
 

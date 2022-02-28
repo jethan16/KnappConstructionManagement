@@ -3,8 +3,10 @@ import "./footer.css"
 
 const Footer = () => {
     return(
-        <div>
-            {/* <h1>Footer</h1> */}
+        <div className="footer">
+            <h6>Information: Text</h6>
+            <h6>Information: Text</h6>
+            <h6>Information: Text</h6>
         </div>
     );
 };
