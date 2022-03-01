@@ -3,9 +3,6 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
-import imageOne from "../../../Assets/DJI_0141.jpeg"
-import imageTwo from "../../../Assets/DJI_0250.jpeg"
-import imageThree from "../../../Assets/HP7A0013.jpeg"
 
 // const images = [
 //     {

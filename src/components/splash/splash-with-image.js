@@ -57,7 +57,22 @@ const SplashWithImage = ({id, model, backgroundColor, title, titleColor, subtitl
             } 
             {
               buttons ? buttons.map(button => (
-                  <Button>{button.buttonText}</Button>
+                button.copy == "SCHEDULE A CALL" ?
+                        <a href="+12396758333">
+                          <Button 
+                            color={button.buttonTextColor.hex} 
+                            backgroundColor={button.buttonBackgroundColor.hex}>
+                            {button.buttonText.toUpperCase()}
+                          </Button>
+                        </a> :
+                        <Link to={`/${button.link.model.apiKey}`}>
+                          <Button 
+                            color={button.buttonTextColor.hex} 
+                            backgroundColor={button.buttonBackgroundColor.hex}>
+                            {button.buttonText.toUpperCase()}
+                          </Button>
+                        </Link>
+                
               )) : <></>
             }
             </div>
@@ -142,7 +157,7 @@ const List = styled.ul`
 const ListItem = styled.li`
     margin: 10px 0;
     font-size: 14px;
-    text-align: center;
+    text-align: start;
     color: ${props => props.color ? props.color : '#33332E'};
     @media (min-width: 768px) {
       text-align: start;

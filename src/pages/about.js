@@ -165,6 +165,25 @@ query AboutQuery {
           url
         }
         button {
+          link {
+            ... on DatoCmsAbout {
+              model {
+                apiKey
+              }
+            }
+            ... on DatoCmsIndex {
+              id
+              model {
+                apiKey
+              }
+            }
+            ... on DatoCmsService {
+              id
+              model {
+                apiKey
+              }
+            }
+          }
           buttonBackgroundColor {
             hex
           }
@@ -219,6 +238,25 @@ query AboutQuery {
           carousel
         }
         buttons {
+          link {
+            ... on DatoCmsAbout {
+              model {
+                apiKey
+              }
+            }
+            ... on DatoCmsIndex {
+              id
+              model {
+                apiKey
+              }
+            }
+            ... on DatoCmsService {
+              id
+              model {
+                apiKey
+              }
+            }
+          }
           buttonText
           buttonBackgroundColor {
             hex
@@ -253,6 +291,25 @@ query AboutQuery {
           }
         }
         buttonOne {
+          link {
+            ... on DatoCmsAbout {
+              model {
+                apiKey
+              }
+            }
+            ... on DatoCmsIndex {
+              id
+              model {
+                apiKey
+              }
+            }
+            ... on DatoCmsService {
+              id
+              model {
+                apiKey
+              }
+            }
+          }
           buttonText
           buttonBackgroundColor {
             hex
@@ -281,6 +338,25 @@ query AboutQuery {
           }
         }
         buttonTwo {
+          link {
+            ... on DatoCmsAbout {
+              model {
+                apiKey
+              }
+            }
+            ... on DatoCmsIndex {
+              id
+              model {
+                apiKey
+              }
+            }
+            ... on DatoCmsService {
+              id
+              model {
+                apiKey
+              }
+            }
+          }
           buttonText
           buttonBackgroundColor {
             hex
@@ -342,6 +418,25 @@ query AboutQuery {
           }
         }
         buttons {
+          link {
+            ... on DatoCmsAbout {
+              model {
+                apiKey
+              }
+            }
+            ... on DatoCmsIndex {
+              id
+              model {
+                apiKey
+              }
+            }
+            ... on DatoCmsService {
+              id
+              model {
+                apiKey
+              }
+            }
+          }
           buttonText
           buttonBackgroundColor {
             hex

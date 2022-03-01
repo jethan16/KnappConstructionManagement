@@ -10,6 +10,8 @@ const Splash = ({id, model, backgroundColor, title, titleColor, subtitle, subtit
 
   const [ imagesArrayState, setImagesArrayState ] = useState({}) 
 
+  console.log(buttons)
+
   useEffect(() => {
     if (imagesArray[0] !== undefined && imagesArray[0].carousel === false) {
       setImagesArrayState({
@@ -111,7 +113,21 @@ const Splash = ({id, model, backgroundColor, title, titleColor, subtitle, subtit
         }
         {
           buttons ? buttons.map(button => (
-              <Button color={button.buttonTextColor.hex} backgroundColor={button.buttonBackgroundColor.hex}>{button.buttonText.toUpperCase()}</Button>
+            button.buttonText.toUpperCase() === "SCHEDULE A CALL" ?
+              <a href="tel:+12396758333">
+                <Button 
+                  color={button.buttonTextColor.hex} 
+                  backgroundColor={button.buttonBackgroundColor.hex}>
+                  {button.buttonText.toUpperCase()}
+                </Button>
+              </a> :
+              <Link to={`/${button.link.model.apiKey}`}>
+                <Button 
+                  color={button.buttonTextColor.hex} 
+                  backgroundColor={button.buttonBackgroundColor.hex}>
+                  {button.buttonText.toUpperCase()}
+                </Button>
+              </Link>
           )) : <></>
         }
       </div>

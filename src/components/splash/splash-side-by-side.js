@@ -29,7 +29,21 @@ const SplashSideBySide = ({id, model, backgroundOneColor, titleOne, titleOneColo
             }
             {
             buttonOne ? buttonOne.map(button => (
-                <Button color={button.buttonTextColor.hex} backgroundColor={button.buttonBackgroundColor.hex}>{button.buttonText.toUpperCase()}</Button>
+                buttonOne.copy == "Schedule a copy" ?
+                <a href="+12396758333">
+                    <Button 
+                        color={button.buttonTextColor.hex} 
+                        backgroundColor={button.buttonBackgroundColor.hex}>
+                        {button.buttonText.toUpperCase()}
+                    </Button>
+                </a> :
+                <Link to={`/${button.link.model.apiKey}`}>
+                    <Button 
+                        color={button.buttonTextColor.hex} 
+                        backgroundColor={button.buttonBackgroundColor.hex}>
+                        {button.buttonText.toUpperCase()}
+                    </Button>
+                </Link>
             )) : <></>
             }
       </SideOne>
@@ -53,7 +67,21 @@ const SplashSideBySide = ({id, model, backgroundOneColor, titleOne, titleOneColo
             }
             {
             buttonTwo ? buttonTwo.map(button => (
-                <Button color={button.buttonTextColor.hex} backgroundColor={button.buttonBackgroundColor.hex}>{button.buttonText.toUpperCase()}</Button>
+                buttonOne.copy == "Schedule a copy" ?
+                <a href="+12396758333">
+                    <Button 
+                        color={button.buttonTextColor.hex} 
+                        backgroundColor={button.buttonBackgroundColor.hex}>
+                        {button.buttonText.toUpperCase()}
+                    </Button>
+                </a> :
+                <Link to={`/${button.link.model.apiKey}`}>
+                    <Button 
+                        color={button.buttonTextColor.hex} 
+                        backgroundColor={button.buttonBackgroundColor.hex}>
+                        {button.buttonText.toUpperCase()}
+                    </Button>
+                </Link>
             )) : <></>
             }
       </SideTwo>

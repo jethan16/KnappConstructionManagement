@@ -1,5 +1,5 @@
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
+  path: `.env.${process.env.NODE_ENV}`
 });
 
 module.exports = {
@@ -13,7 +13,7 @@ module.exports = {
     {
       resolve: "gatsby-source-datocms",
       options: {
-        apiToken: process.env.GATSBY_DATO_CMS_KEY,
+        apiToken: process.env.DATO_API_TOKEN,
       },
     },
     "gatsby-plugin-styled-components",
@@ -24,6 +24,18 @@ module.exports = {
       options: {
         once: true
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `GatsbyJS`,
+        short_name: `GatsbyJS`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: "src/images/KCM_icon-O.png"
+      },
+    },
   ],
 };

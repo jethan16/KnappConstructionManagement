@@ -19,7 +19,7 @@ import Carousel from "../components/carousel/carousel"
 // markup
 const IndexPage = ({data}) => {
 
-  const pageData = data.datoCmsHomePage.homePageModularContent;
+  const pageData = data.datoCmsIndex.homePageModularContent;
   
   return(
     <Layout>
@@ -189,7 +189,7 @@ const Caption = styled.p`
 `
 export const query = graphql`
 query IndexQuery {
-  datoCmsHomePage {
+  datoCmsIndex {
     homePageModularContent {
       ... on DatoCmsHero {
         id
@@ -208,6 +208,25 @@ query IndexQuery {
           url
         }
         button {
+          link {
+            ... on DatoCmsAbout {
+              model {
+                apiKey
+              }
+            }
+            ... on DatoCmsIndex {
+              id
+              model {
+                apiKey
+              }
+            }
+            ... on DatoCmsService {
+              id
+              model {
+                apiKey
+              }
+            }
+          }
           buttonBackgroundColor {
             hex
           }
@@ -262,6 +281,25 @@ query IndexQuery {
           carousel
         }
         buttons {
+          link {
+            ... on DatoCmsAbout {
+              model {
+                apiKey
+              }
+            }
+            ... on DatoCmsIndex {
+              id
+              model {
+                apiKey
+              }
+            }
+            ... on DatoCmsService {
+              id
+              model {
+                apiKey
+              }
+            }
+          }
           buttonText
           buttonBackgroundColor {
             hex
@@ -296,6 +334,25 @@ query IndexQuery {
           }
         }
         buttonOne {
+          link {
+            ... on DatoCmsAbout {
+              model {
+                apiKey
+              }
+            }
+            ... on DatoCmsIndex {
+              id
+              model {
+                apiKey
+              }
+            }
+            ... on DatoCmsService{
+              id
+              model {
+                apiKey
+              }
+            }
+          }
           buttonText
           buttonBackgroundColor {
             hex
@@ -324,6 +381,25 @@ query IndexQuery {
           }
         }
         buttonTwo {
+          link {
+            ... on DatoCmsAbout {
+              model {
+                apiKey
+              }
+            }
+            ... on DatoCmsIndex {
+              id
+              model {
+                apiKey
+              }
+            }
+            ... on DatoCmsService {
+              id
+              model {
+                apiKey
+              }
+            }
+          }
           buttonText
           buttonBackgroundColor {
             hex
@@ -385,6 +461,25 @@ query IndexQuery {
           }
         }
         buttons {
+          link {
+            ... on DatoCmsAbout {
+              model {
+                apiKey
+              }
+            }
+            ... on DatoCmsIndex {
+              id
+              model {
+                apiKey
+              }
+            }
+            ... on DatoCmsService {
+              id
+              model {
+                apiKey
+              }
+            }
+          }
           buttonText
           buttonBackgroundColor {
             hex

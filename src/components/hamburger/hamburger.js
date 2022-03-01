@@ -9,7 +9,7 @@ const HamburgerMenu = () => {
         setMenuState(!menuState)
     }
 
-    const menuItems = [{title: 'Home', path: '/'}, {title: 'About', path: '/about/'}, {title: 'Services', path: '/services/'}]
+    const menuItems = [{title: 'Home', path: '/'}, {title: 'About', path: '/about/'}, {title: 'Services', path: '/service/'}]
 
     return (
         <>

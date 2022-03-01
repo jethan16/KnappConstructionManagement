@@ -6,6 +6,8 @@ import "./header.css"
 
 const Header = ({title, subtitle, videoURL, media, button}) => {
 
+    console.log(button)
+
     return(
         <HeaderWrapper>
             <Overlay />
@@ -19,14 +21,23 @@ const Header = ({title, subtitle, videoURL, media, button}) => {
             </ContentWrapper>
             {
                 button ? button.map(button => (
-                    <Link to={button.link}>
+                    button.copy == "CONTACT US" ? 
+                    <a href="mailto:gknapp@knappcm.com">
+                        <Button 
+                            buttonColor={button.backgroundColor.hex} 
+                            buttonTextColor={button.color.hex}>
+                            {button.copy}
+                        </Button>  
+                    </a>
+                    :
+                    <Link to={`/${button.link}`}>
                             <Button 
                             buttonColor={button.backgroundColor.hex} 
                             buttonTextColor={button.color.hex}>
                             {button.copy}
                             </Button> 
                     </Link>
-                )) : ''
+                )) : <></>
             }
         </HeaderWrapper>
     );

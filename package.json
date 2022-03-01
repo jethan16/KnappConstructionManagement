@@ -27,6 +27,7 @@
     "gatsby-plugin-fontawesome-css": "^1.2.0",
     "gatsby-plugin-gatsby-cloud": "^2.6.1",
     "gatsby-plugin-image": "^2.6.0",
+    "gatsby-plugin-manifest": "^4.9.0",
     "gatsby-plugin-scroll-reveal": "^0.0.7",
     "gatsby-plugin-sharp": "^4.6.0",
     "gatsby-plugin-styled-components": "^4.6.0",
