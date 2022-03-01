@@ -20,7 +20,7 @@ import Carousel from "../components/carousel/carousel"
 const ServicesPage = ({data}) => {
 
   const pageData = data.datoCmsService.servicesPageModularContent;
-//   console.log(pageData)
+
   return(
     <Layout>
       {
