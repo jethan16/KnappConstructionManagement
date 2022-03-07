@@ -5,12 +5,11 @@ import CirclesGraph from '../header/circlesGraph/circlesGraph';
 
 // Imported components
 import Carousel from '../carousel/carousel'
+import PhotoGrid from '../photo-grid/photo-grid';
 
 const Splash = ({id, model, backgroundColor, title, titleColor, subtitle, subtitleColor, list, bodyCopy, imagesArray, buttons}) => {
 
   const [ imagesArrayState, setImagesArrayState ] = useState({}) 
-
-  console.log(buttons)
 
   useEffect(() => {
     if (imagesArray[0] !== undefined && imagesArray[0].carousel === false) {
@@ -108,7 +107,7 @@ const Splash = ({id, model, backgroundColor, title, titleColor, subtitle, subtit
             </ImagesArrayWrapper>
           ) : imagesArrayState.type === 'carousel' ? 
           (
-            <Carousel images={imagesArrayState.content}/>
+            <PhotoGrid images={imagesArrayState.content}/>
           ) : <></>
         }
         {

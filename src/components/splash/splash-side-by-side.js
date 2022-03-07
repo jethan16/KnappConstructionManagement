@@ -147,7 +147,8 @@ const SplashTitle = styled.h2`
     padding: ${props => props.titleStyle === 'title' ? '0px' : '25px 0'}
 `
 const SplashSubtitle = styled.h2`
-    color: ${props => props.textColor ? props.textColor : ''}
+    color: ${props => props.textColor ? props.textColor : ''};
+    text-align: center;
 `
 const SplashBody = styled.p`
     text-align: left; 

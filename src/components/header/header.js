@@ -6,8 +6,6 @@ import "./header.css"
 
 const Header = ({title, subtitle, videoURL, media, button}) => {
 
-    console.log(button)
-
     return(
         <HeaderWrapper>
             <Overlay />
