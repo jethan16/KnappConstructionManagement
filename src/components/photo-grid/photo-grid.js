@@ -20,12 +20,16 @@ const PhotoGrid = ({images}) => {
     })
   }
 
+  console.log(modalState)
+
   return(
     <GridWrapper>
       {
         images.map((image, i) => (
-          <PreviewWrapper key={i} onClick={(e) => handleImageModal(e, i)}>
-            <FontAwesomeIcon icon={faExpand} style={{fontSize: '20px', color: '#FFFFFF', position: 'absolute', top: '10px', left: '10px'}}/>
+          <PreviewWrapper key={i} onClick={(e) => handleImageModal(e, i)} active={modalState}>
+            <IconWrapper>
+              <FontAwesomeIcon icon={faExpand} style={{fontSize: '20px', color: '#FFFFFF', position: 'absolute', top: '10px', left: '10px'}}/>
+            </IconWrapper>
             <PreviewImage src={image.url} alt={image.alt}/>
             <PreviewImageTitle class="preview-title">{image.title}</PreviewImageTitle>
           </PreviewWrapper>
@@ -37,7 +41,6 @@ const PhotoGrid = ({images}) => {
           <>
           <FontAwesomeIcon icon={faXmark} style={{display: modalState ? 'block' : 'none', fontSize: '25px', color: 'black', position: 'absolute', top: '15px', right: '20px'}} onClick={() => setModalState(false)}/>
           <ModalImage src={modalImage.src} alt={modalImage.alt}/>
-          {/* <ModalImageTitle title={}>{modalImage.title}</ModalImageTitle> */}
           </>
         }
       </Modal>
@@ -97,32 +100,43 @@ const PreviewImageTitle = styled.p`
   font-size: 12px;
   padding: 5px 10px; 
 `
+const IconWrapper = styled.div`
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+`
 const Modal = styled.section`
   display: none;
   position: fixed;
   top: 20vh;
-  transition: .25s all;
+  transition: .15s all;
   padding: 0px;
   @media(min-width: 768px) {
     height: ${(props) => props.active ? '500px' : '0px'};
     width: ${(props) => props.active ? '600px' : '0px'};
+    padding: 50px 0;
     display: inline;
     position: absolute;
     background-color: rgba(236, 236, 236, .75);
     img {
-      object-fit: contain;
+      object-fit: cover;
       object-position: center;
     }
     &:after {
-      content: ${props => props.title ? props.title : ''};
       position: absolute;
       right: 0px;
-      bottom: 25px;
+      bottom: 75px;
       color: #ffffff;
       background-color: #FE3200;
       font-size: 12px;
-      padding: 5px 10px; 
-    }
+      padding: ${(props) => props.active ? '5px 10px' : '0px'}; 
+      }
+  }
+  @media(min-width: 1024px) {
+    height: ${(props) => props.active ? '600px' : '0px'};
+    width: ${(props) => props.active ? '700px' : '0px'};
+    top: 15vh;
   }
 `
 const CloseModalButton = styled.div`
@@ -141,5 +155,5 @@ const ModalImageTitle = styled.div`
   color: #ffffff;
   background-color: #FE3200;
   font-size: 12px;
-  padding: 5px 10px; 
+  padding: ${(props) => props.active ? '5px 10px' : '0px'}; 
 `

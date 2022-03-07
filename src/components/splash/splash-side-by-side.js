@@ -140,7 +140,7 @@ const Container = styled.div`
 `
 const SplashTitle = styled.h2`
     color: ${props => props.textColor ? props.textColor : ''};
-    text-decoration: ${props => props.titleStyle === 'title' ? 'underline' : 'none'};
+    text-decoration: ${props => props.titleStyle === 'title' ? 'none' : 'none'};
     text-align: center;
     font-weight: 500;
     margin-bottom: ${props => props.titleStyle === 'title' ? '5px' : '0px'};

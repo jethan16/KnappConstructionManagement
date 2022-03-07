@@ -130,7 +130,7 @@ const Container = styled.div`
 `
 const SplashTitle = styled.h2`
     color: ${props => props.textColor ? props.textColor : ''};
-    text-decoration: underline;
+    /* text-decoration: underline; */
     text-align: start;
     font-weight: 500;
 `
