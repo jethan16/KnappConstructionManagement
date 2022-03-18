@@ -32,42 +32,6 @@ const ServicesPage = ({data}) => {
 
 export default ServicesPage
 
-const FlexWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  section {
-    width: 100%;
-  }
-  @media only screen and (min-width: 768px) {
-    section {
-      width: 50%
-    }
-  }
-`
-const CarouselContainer = styled.div`
-`
-const ImageBannerWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-`
-const ImageWithCaption = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 290px;
-  img {
-    margin: 10px 0;
-    width: 290px;
-    object-fit: contain;
-  }
-`
-const Caption = styled.p`
-  color: #FE3200;
-  text-align: center;
-  font-weight: 500;
-`
 export const query = graphql`
 query ServicesQuery {
 datoCmsService {

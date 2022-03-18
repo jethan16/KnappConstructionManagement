@@ -84,7 +84,6 @@ const Overlay = styled.div`
 const Title = styled.h1`
     text-align: center;
     color: ${props => props.color ? props.color : 'black'};
-    text-decoration: underline;
 `;
 const Subtitle = styled.h1`
     text-align: center;

@@ -113,7 +113,7 @@ const Splash = ({id, model, backgroundColor, title, titleColor, subtitle, subtit
         {
           buttons ? buttons.map(button => (
             button.buttonText.toUpperCase() === "SCHEDULE A CALL" ?
-              <a href="tel:+12396758333">
+              <a href="mailto:gknapp@knappcm.com">
                 <Button 
                   color={button.buttonTextColor.hex} 
                   backgroundColor={button.buttonBackgroundColor.hex}>

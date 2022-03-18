@@ -77,6 +77,57 @@ const SplashWithImage = ({id, model, backgroundColor, title, titleColor, subtitl
             }
             </div>
           </Container>
+          {
+            title.toLowerCase() == 'owner representative services' ? (
+              <PhaseWrapper> 
+                <h3>We have three stages of operation</h3>
+                <Phase>
+                  <h4>Planning Phase</h4>
+                  <ul>
+                    <li>Early project planning</li>
+                    <li>Manage Concept design/budget</li>
+                    <li>Manage schematic design/budget</li>
+                    <li>Master schedule</li>
+                    <li>Master budget</li>
+                    <li>Project execution plan</li>
+                    <li>Manage team selection</li>
+                    <li>Manage early contracts</li>
+                    <li>Manage RFP process</li>
+                    <li>Permit execution plan</li>
+                  </ul>
+                </Phase>
+                <Phase>
+                  <h4>Design & Preconstruction Phase</h4>
+                  <ul>
+                    <li>Manage design process</li>
+                    <li>Manage schematic, DD, and CD budgets</li>
+                    <li>Master project schedule</li>
+                    <li>Prepare all contracts</li>
+                    <li>Site management planning/phasing plan</li>
+                    <li>Manage GMP process</li>
+                    <li>Value engineering</li>
+                    <li>Fast track Long lead material procurement</li>
+                    <li>Document redi-check</li>
+                    <li>Constructability review</li>
+                  </ul>
+                </Phase>
+                <Phase>
+                  <h4>Construction Phase</h4>
+                  <ul>
+                    <li>Coordination between owner, designer, and builder</li>
+                    <li>Master budget management</li>
+                    <li>Schedule management</li>
+                    <li>Change order management</li>
+                    <li>Quality compliance reviews</li>
+                    <li>FF&E management</li>
+                    <li>Manage all owner contracts</li>
+                    <li>Claims prevention and management</li>
+                    <li>Manage turnover and commissioning</li>
+                  </ul>
+                </Phase>
+              </PhaseWrapper>
+            ): <></>
+          }
       </SplashWrapper>
     );
 };
@@ -130,7 +181,6 @@ const Container = styled.div`
 `
 const SplashTitle = styled.h2`
     color: ${props => props.textColor ? props.textColor : ''};
-    /* text-decoration: underline; */
     text-align: start;
     font-weight: 500;
 `
@@ -174,4 +224,46 @@ const Button = styled.button`
     border-radius: 0;
     background-color: ${props => props.buttonColor ? props.buttonColor : '#FE3200'};
     color: ${props => props.buttonTextColor ? props.buttonTextColor : '#FFFFFF'}
+`
+const PhaseWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  h3 {
+    width: 100%;
+    margin: 15px auto;
+  }
+`
+const Phase = styled.div`
+  margin: 10px;
+  width: 100%;
+  * { 
+    color: #33332E;
+  }
+  h4 {
+    font-size: 16px;
+    color: #fe3200;
+    text-align: start;
+  }
+  ul {
+    text-align: center;
+  }
+  li {
+    text-align: start;
+    font-size: 12px;
+    list-style: disc;
+  }
+  @media (min-width: 768px) {
+    width: 30%;
+  }
+  @media (min-width: 1280px) {
+    width: 25%;
+    h4 {
+      font-size: 20px;
+    }
+    li {
+      font-size: 16px;
+    }
+  }
 `
