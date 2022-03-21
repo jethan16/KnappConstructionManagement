@@ -20,7 +20,7 @@ const Navbar = () => {
 export default Navbar;
 
 const Logo = styled.img`
-    width: 100px;
+    width: 150px;
     position: absolute;
     top: 25px; 
     left: 25px;
